@@ -12,4 +12,4 @@ def open_file(path):
 	print rows
 
 
-open_file()
+open_file(101_radical.xlsx)

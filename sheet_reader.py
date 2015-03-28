@@ -1,5 +1,5 @@
 f1 = open('101_radicals.csv', 'r')
-f2 = open('test2.txt', 'w')
+f2 = open('chars.txt', 'w')
 
 
 lines = f1.readlines()

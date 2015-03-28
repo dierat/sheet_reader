@@ -6,11 +6,12 @@ lines = f1.readlines()
 
 for line in lines:
 	temp_array = line.split(',')
-	temp_string = ''
+	temp_string = '['
 	for i in range(len(temp_array)):
 		temp_string = temp_string + "'" + temp_array[i] + "'"
 		if i != len(temp_array) - 1:
 			temp_string = temp_string + ','
+	temp_string = temp_string + ']'
 	f2.write(temp_string)
 		
 

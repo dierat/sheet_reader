@@ -1,5 +1,5 @@
-f1 = open('test1.txt')
-f2 = open('test2.txt')
+f1 = open('test1.txt', 'r')
+f2 = open('test2.txt', 'w')
 
 lines = f1.readlines()
 

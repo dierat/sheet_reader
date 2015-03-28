@@ -4,6 +4,8 @@ f2 = open('test2.txt', 'w')
 
 lines = f1.readlines()
 
+f2.write('chars = [')
+
 for line in lines:
 	temp_array = line.split(',')
 	temp_string = '['
@@ -13,6 +15,8 @@ for line in lines:
 			temp_string = temp_string + ','
 	temp_string = temp_string + ']'
 	f2.write(temp_string)
+
+f2.write(']')
 		
 
 f1.close()

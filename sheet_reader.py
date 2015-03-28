@@ -4,7 +4,7 @@ f2 = open('chars.txt', 'w')
 
 lines = f1.readlines()
 
-f2.write('chars = [')
+f2.write('chars = [\n')
 
 for i in range(len(lines)):
 	temp_string = '['
@@ -14,9 +14,11 @@ for i in range(len(lines)):
 			descrip = temp_array[j]
 			edited_descrip = ''
 			for k in range(len(descrip)):
-			 	if k != 0 and k != (len(descrip) - 2):
-			 		if descrip[k] != '"':
+			 	if k != 0 and k != (len(descrip) - 1) and k != (len(descrip) - 2):
+			 		if descrip[k] != '"' and descrip[k] != "'":
 			 			edited_descrip += descrip[k]
+			 		if descrip[k] == '\'':
+			 			edited_descrip += '\\' + "'"
 			 		if descrip[k] == '"':
 			 			if descrip[k + 1] != '"':
 			 				edited_descrip += descrip[k]
@@ -26,10 +28,10 @@ for i in range(len(lines)):
 			temp_string = temp_string + ','
 	temp_string = temp_string + ']'
 	if i != len(lines) - 1:
-		temp_string = temp_string + ','
+		temp_string = temp_string + ',\n'
 	f2.write(temp_string)
 
-f2.write(']')
+f2.write('\n];')
 		
 
 f1.close()

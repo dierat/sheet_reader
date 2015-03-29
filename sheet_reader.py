@@ -15,12 +15,12 @@ for i in range(len(lines)):
 		if j == 5:
 			temp_array[j] = temp_array[j].replace('""', '*').replace('"', '').replace('*', '"')
 			temp_array[j] = temp_array[j].replace('\n', '').replace("'", "\'")
-		temp_string = temp_string + "'" + temp_array[j] + "'"
+		temp_string += "'" + temp_array[j] + "'"
 		if j != len(temp_array) - 1:
-			temp_string = temp_string + ','
-	temp_string = temp_string + ']'
+			temp_string += ','
+	temp_string += ']'
 	if i != len(lines) - 1:
-		temp_string = temp_string + ',\n'
+		temp_string += ',\n'
 	f2.write(temp_string)
 
 f2.write('\n];')

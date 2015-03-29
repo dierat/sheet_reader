@@ -11,7 +11,7 @@ for i in range(len(lines)):
 	temp_array = lines[i].split(',', 5)
 	for j in range(len(temp_array)):
 		if j == 4:
-			temp_array[4] = temp_array[2].replace(' ', '_') + '.' + temp_array[4]
+			temp_array[j] = temp_array[2].replace(' ', '_') + '.' + temp_array[j]
 		if j == 5:
 			temp_array[j] = temp_array[j].replace('""', '*').replace('"', '').replace('*', '"')
 			temp_array[j] = temp_array[j].replace('\n', '').replace("'", "\'")

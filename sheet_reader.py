@@ -10,6 +10,8 @@ for i in range(len(lines)):
 	temp_string = '['
 	temp_array = lines[i].split(',', 5)
 	for j in range(len(temp_array)):
+		if j == 4:
+			temp_array[4] = temp_array[2].replace(' ', '_') + '.' + temp_array[4]
 		if j == 5:
 			descrip = temp_array[j]
 			edited_descrip = ''
